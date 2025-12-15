@@ -25,21 +25,6 @@ namespace FormularioEleicao.Infraestrutura.Repositorios
             return formulario;
         }
 
-        public Formulario AlterarResposta(Resposta resposta)
-        {
-            var formulario = _context.Formularios
-                .FirstOrDefault(f => f.Respostas.Any(r => r.NumeroPergunta == resposta.NumeroPergunta));
-
-            if(formulario != null)
-            {
-                formulario.AlteraResposta(resposta);
-                _context.Formularios.Update(formulario);
-                _context.SaveChanges();
-            }
-
-            return formulario;
-        }
-
         public void Deletar(Guid id)
         {
             var formulario = _context.Formularios.Find(id);

@@ -28,10 +28,5 @@ namespace FormularioEleicao.Dominio.Formularios
 
             return questao;
         }
-
-        public void AlteraResposta(bool resposta)
-        {
-            Valor = resposta;
-        }
     }
 }

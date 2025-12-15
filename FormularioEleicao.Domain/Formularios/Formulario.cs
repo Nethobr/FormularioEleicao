@@ -56,14 +56,5 @@ namespace FormularioEleicao.Dominio.Formularios
             _respostas.Add(resposta);
             return resposta;
         }
-
-        public void AlteraResposta(Resposta resposta)
-        {
-            var respostaExistente = _respostas.FirstOrDefault(r => r.NumeroPergunta == resposta.NumeroPergunta);
-            if (respostaExistente == null)
-                throw new DominioException("A questão não existe no formulário.");
-
-            respostaExistente.AlteraResposta(resposta.Valor);
-        }
     }
 }

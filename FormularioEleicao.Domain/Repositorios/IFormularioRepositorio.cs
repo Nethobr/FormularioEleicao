@@ -11,8 +11,6 @@ namespace FormularioEleicao.Dominio.Repositorios
     {
         Formulario Adicionar(Formulario formulario);
 
-        Formulario AlterarResposta(Resposta resposta);
-
         void Deletar(Guid id);
 
         Formulario ObterPorId(Guid id);
