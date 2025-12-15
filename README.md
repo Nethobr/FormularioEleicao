@@ -1,4 +1,14 @@
+#### Observação Importante:
+- Para a execução dos testes no Postman, foi utilizada uma variável de denominada host, responsável por armazenar a URL base da API.
+- Para que os testes possam ser realizados corretamente, é necessário informar essa variável com o endereço base da aplicação, que, em ambiente local, corresponde a: `http://localhost:5289`
+- Para isso basta ir em:
+    > Arquitetura com .NET > Variables > Onde está informado `host` > Colocar o endereço base.
+Essa abordagem facilita a reutilização da coleção de testes em diferentes ambientes, sem a necessidade de alterar manualmente os endpoints configurados no Postman.
+
+----
+
 # Sistema para Formulários de Eleição
+
 
 ## 1. APRESENTAÇÃO DO PROJETO
 Este projeto constitui-se em um sistema robusto para a gestão de formulários de pesquisa única eleitoral.
