@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Aplicacao/">
+    <Project Path="FormularioEleicao.Api/FormularioEleicao.Api.csproj" Id="d97778d2-d794-42a4-9dc6-7999c3147072" />
+  </Folder>
+  <Folder Name="/Dominio/">
+    <Project Path="FormularioEleicao.Domain/FormularioEleicao.Dominio.csproj" />
+  </Folder>
+  <Folder Name="/Infraestrutura/">
+    <Project Path="FormularioEleicao.Infraestrutura/FormularioEleicao.Infraestrutura.csproj" Id="faeb4fd4-960a-43b8-a829-5cfd04f08ede" />
+  </Folder>
+</Solution>
