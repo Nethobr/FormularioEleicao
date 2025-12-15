@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "fa0abf96-d978-4a7e-b279-67731bf8257a",
+		"name": "Arquitetura com .NET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42373355"
+	},
+	"item": [
+		{
+			"name": "Perguntas",
+			"item": [
+				{
+					"name": "Cadastrar Pergunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroPergunta\": 1,\r\n    \"texto\": \"Pergunta de teste?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/perguntas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Pergunta por Guid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/perguntas/22cc3c28-2e2e-40c6-a4e8-ee429a602def",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas",
+								"22cc3c28-2e2e-40c6-a4e8-ee429a602def"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Pergunta por Número",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/perguntas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Texto Pergunta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"texto\": \"Pergunta de teste??\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/perguntas/8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas",
+								"8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Pergunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"numeroPergunta\": 2,\r\n        \"texto\": \"Pergunta de teste, agora atualizada??\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/perguntas/8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas",
+								"8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/perguntas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Pergunta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/perguntas/8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perguntas",
+								"8c53f1e5-470f-4d59-8fd8-eb4000ac9b8c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Formulários",
+			"item": [
+				{
+					"name": "Obter todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/formularios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"formularios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Formulário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"candidato\": {\r\n        \"nome\": \"Candidato 1\",\r\n        \"documento\": \"123123123123\",\r\n        \"email\": \"candidato@candidato.com\",\r\n        \"partido\": \"Partido 1\"\r\n    },\r\n    \"entrevistado\": {\r\n        \"nome\": \"Entrevistado 1\",\r\n        \"documento\": \"123123123123\",\r\n        \"email\": \"entrevistado@entrevistado.com\",\r\n        \"ip\": \"127.0.0.1\"\r\n    },\r\n    \"respostas\": [\r\n        {\r\n            \"numeroPergunta\": 1,\r\n            \"valor\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/formularios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"formularios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": ""
+		}
+	]
+}
